@@ -1,17 +1,868 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professional freelancer team portfolio - Transform ideas into digital excellence" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUNG tech - Freelancer Team Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation" id="navigation">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo" onclick="scrollToSection('hero')">
+                    <span class="logo-text">YOUNG <span class="logo-tech">tech</span></span>
+                </div>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#team-members" onclick="scrollToSection('team-members'); return false;">Team</a></li>
+                    <li><a href="#services" onclick="scrollToSection('services'); return false;">Services</a></li>
+                    <li><a href="#portfolio" onclick="scrollToSection('portfolio'); return false;">Portfolio</a></li>
+                    <li><a href="#testimonials" onclick="scrollToSection('testimonials'); return false;">Testimonials</a></li>
+                    <li><a href="#process" onclick="scrollToSection('process'); return false;">Process</a></li>
+                    <li><a href="#contact" onclick="scrollToSection('contact'); return false;">Contact</a></li>
+                </ul>
 
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <svg id="menuIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12h18M3 6h18M3 18h18"></path>
+                    </svg>
+                    <svg id="closeIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <path d="M18 6L6 18M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        We Transform Ideas into
+                        <span class="gradient-text"> Digital Excellence</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        A professional freelancer team delivering cutting-edge web development, 
+                        design, and digital solutions for forward-thinking companies.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                            Start Your Project
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('portfolio')">
+                            View Our Work
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-placeholder">
+                        <div class="floating-card card-1">
+                            <div class="card-content"></div>
+                        </div>
+                        <div class="floating-card card-2">
+                            <div class="card-content"></div>
+                        </div>
+                        <div class="floating-card card-3">
+                            <div class="card-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Overview Section -->
+    <section id="team" class="team-overview section">
+        <div class="container">
+            <h2 class="section-title">Who We Are</h2>
+            <p class="section-subtitle">
+                A dedicated team of skilled professionals committed to delivering 
+                exceptional digital solutions that drive business growth.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: var(--color-primary);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 13v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6M21 13l-9-5-9 5"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: var(--color-secondary);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: var(--color-accent);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+
+            <div class="mission-section">
+                <div class="mission-content">
+                    <h3 class="mission-title">Our Mission</h3>
+                    <p class="mission-text">
+                        We empower businesses to thrive in the digital landscape by providing 
+                        innovative, scalable, and user-centric solutions. Our mission is to bridge 
+                        the gap between vision and reality, transforming complex challenges into 
+                        elegant digital experiences that drive measurable results.
+                    </p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h4>Excellence</h4>
+                        <p>We strive for perfection in every project</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Innovation</h4>
+                        <p>Cutting-edge solutions for modern challenges</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Collaboration</h4>
+                        <p>Partnership approach with every client</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Transparency</h4>
+                        <p>Clear communication throughout the process</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">
+                Comprehensive digital solutions tailored to your business needs
+            </p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Custom web applications built with modern technologies and best practices.</p>
+                    <ul class="service-deliverables">
+                        <li>React/Next.js</li>
+                        <li>Node.js Backend</li>
+                        <li>API Integration</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Mobile App Development</h3>
+                    <p class="service-description">Native and cross-platform mobile applications for iOS and Android.</p>
+                    <ul class="service-deliverables">
+                        <li>Flutter</li>
+                        <li>iOS Development</li>
+                        <li>Android Development</li>
+                        <li>App Store Deployment</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="3" x2="9" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-description">User-centered design that combines aesthetics with functionality.</p>
+                    <ul class="service-deliverables">
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>Design Systems</li>
+                        <li>User Testing</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Branding & Identity</h3>
+                    <p class="service-description">Complete brand identity packages that tell your unique story.</p>
+                    <ul class="service-deliverables">
+                        <li>Logo Design</li>
+                        <li>Brand Guidelines</li>
+                        <li>Visual Identity</li>
+                        <li>Marketing Materials</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Maintenance & Support</h3>
+                    <p class="service-description">Ongoing support and maintenance to keep your digital assets running smoothly.</p>
+                    <ul class="service-deliverables">
+                        <li>Bug Fixes</li>
+                        <li>Updates</li>
+                        <li>Security</li>
+                        <li>24/7 Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="portfolio" class="case-studies section">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-subtitle">
+                Showcasing successful projects that drive real business results
+            </p>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            </div>
+
+            <div class="case-studies-grid" id="caseStudiesGrid">
+                <div class="case-study-card" data-category="mobile">
+                    <div class="case-study-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800" alt="EasyBilling">
+                        <div class="case-study-overlay">
+                            <span class="industry-badge">Mobile App</span>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <h3 class="case-study-title">EasyBilling</h3>
+                        <p class="case-study-client">Billing & Inventory Management</p>
+                        <p class="case-study-developer" style="font-size: 0.875rem; color: var(--color-primary); font-weight: 500; margin-bottom: 0.5rem;">Akashkumar's work</p>
+                        <p class="case-study-description">Android Kotlin billing and inventory management app. Streamlined business operations with efficient billing and inventory tracking.</p>
+                        
+                        <div class="case-study-results">
+                            <span class="result-badge">Efficient Billing System</span>
+                            <span class="result-badge">Inventory Management</span>
+                            <span class="result-badge">User-Friendly Interface</span>
+                        </div>
+
+                        <div class="case-study-tech">
+                            <span class="tech-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                Android
+                            </span>
+                            <span class="tech-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                Kotlin
+                            </span>
+                            <span class="tech-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                MVVM
+                            </span>
+                            <span class="tech-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                Room Database
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-card" data-category="web">
+                    <div class="case-study-image">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800" alt="RD Gardi College Website">
+                        <div class="case-study-overlay">
+                            <span class="industry-badge">Web Development</span>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <h3 class="case-study-title">RD Gardi College Website</h3>
+                        <p class="case-study-client">Educational Institution</p>
+                        <p class="case-study-developer" style="font-size: 0.875rem; color: var(--color-primary); font-weight: 500; margin-bottom: 0.5rem;">Rohit's work</p>
+                        <p class="case-study-description">JavaScript and CSS website redesign with updated navigation and pages. Modern, responsive design improving user experience and accessibility.</p>
+                        
+                        <div class="case-study-results">
+                            <span class="result-badge">Modern Design</span>
+                            <span class="result-badge">Improved Navigation</span>
+                            <span class="result-badge">Responsive Layout</span>
+                        </div>
+
+                        <div class="case-study-tech">
+                            <span class="tech-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                JavaScript
+                            </span>
+                            <span class="tech-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                CSS
+                            </span>
+                            <span class="tech-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                HTML
+                            </span>
+                            <span class="tech-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                Responsive Design
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">
+                Trusted by companies worldwide to deliver exceptional results
+            </p>
+
+            <div class="testimonials-container">
+                <button class="testimonial-nav-btn prev" onclick="prevTestimonial()" aria-label="Previous testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="testimonial-card" id="testimonialCard">
+                    <div class="testimonial-rating" id="testimonialRating"></div>
+                    <blockquote class="testimonial-quote" id="testimonialQuote"></blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name" id="authorName"></div>
+                            <div class="author-title" id="authorTitle"></div>
+                            <div class="author-project" id="authorProject"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="testimonial-nav-btn next" onclick="nextTestimonial()" aria-label="Next testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="testimonial-indicators" id="testimonialIndicators"></div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process section">
+        <div class="container">
+            <h2 class="section-title">Our Process</h2>
+            <p class="section-subtitle">
+                A proven methodology that ensures successful project delivery
+            </p>
+
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-connector">
+                        <div class="step-number">1</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="M21 21l-4.35-4.35"></path>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Discovery & Research</h3>
+                        <p class="step-description">We dive deep into your business, goals, and target audience to understand your unique needs.</p>
+                        
+                        <div class="step-details">
+                            <div class="step-activities">
+                                <h4>Activities:</h4>
+                                <ul>
+                                    <li>Stakeholder interviews</li>
+                                    <li>Market research</li>
+                                    <li>Competitor analysis</li>
+                                    <li>User personas</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="step-deliverables">
+                                <h4>Deliverables:</h4>
+                                <ul>
+                                    <li>Project brief</li>
+                                    <li>Research report</li>
+                                    <li>User personas</li>
+                                    <li>Technical requirements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-connector">
+                        <div class="step-number">2</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Planning & Strategy</h3>
+                        <p class="step-description">We create a comprehensive roadmap and strategy tailored to your objectives and timeline.</p>
+                        
+                        <div class="step-details">
+                            <div class="step-activities">
+                                <h4>Activities:</h4>
+                                <ul>
+                                    <li>Information architecture</li>
+                                    <li>Feature prioritization</li>
+                                    <li>Technology selection</li>
+                                    <li>Timeline planning</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="step-deliverables">
+                                <h4>Deliverables:</h4>
+                                <ul>
+                                    <li>Project roadmap</li>
+                                    <li>Technical specification</li>
+                                    <li>Design system</li>
+                                    <li>Project timeline</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-connector">
+                        <div class="step-number">3</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Design & Development</h3>
+                        <p class="step-description">Our team brings your vision to life with beautiful designs and robust, scalable code.</p>
+                        
+                        <div class="step-details">
+                            <div class="step-activities">
+                                <h4>Activities:</h4>
+                                <ul>
+                                    <li>Wireframing & prototyping</li>
+                                    <li>UI/UX design</li>
+                                    <li>Frontend development</li>
+                                    <li>Backend development</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="step-deliverables">
+                                <h4>Deliverables:</h4>
+                                <ul>
+                                    <li>Design mockups</li>
+                                    <li>Interactive prototypes</li>
+                                    <li>MVP development</li>
+                                    <li>Code repository</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-connector">
+                        <div class="step-number">4</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Testing & Quality Assurance</h3>
+                        <p class="step-description">Rigorous testing ensures your product is bug-free, secure, and performs flawlessly.</p>
+                        
+                        <div class="step-details">
+                            <div class="step-activities">
+                                <h4>Activities:</h4>
+                                <ul>
+                                    <li>Unit testing</li>
+                                    <li>Integration testing</li>
+                                    <li>User acceptance testing</li>
+                                    <li>Performance optimization</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="step-deliverables">
+                                <h4>Deliverables:</h4>
+                                <ul>
+                                    <li>Test reports</li>
+                                    <li>Bug fixes</li>
+                                    <li>Performance metrics</li>
+                                    <li>Security audit</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-connector">
+                        <div class="step-number">5</div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Launch & Support</h3>
+                        <p class="step-description">We handle deployment and provide ongoing support to ensure continued success.</p>
+                        
+                        <div class="step-details">
+                            <div class="step-activities">
+                                <h4>Activities:</h4>
+                                <ul>
+                                    <li>Deployment</li>
+                                    <li>Monitoring setup</li>
+                                    <li>Documentation</li>
+                                    <li>Training sessions</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="step-deliverables">
+                                <h4>Deliverables:</h4>
+                                <ul>
+                                    <li>Live product</li>
+                                    <li>Documentation</li>
+                                    <li>Support plan</li>
+                                    <li>Maintenance agreement</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section id="team-members" class="team-members section">
+        <div class="container">
+            <h2 class="section-title">Talented People, Exceptional Results</h2>
+            <p class="section-subtitle">
+                Our team brings together diverse expertise and decades of combined experience. We're not just freelancers—we're seasoned professionals committed to your success.
+            </p>
+
+            <div class="team-members-grid">
+                <div class="team-member-card">
+                    <div class="member-info">
+                        <h3 class="member-name">Rohit Vyas</h3>
+                        <p class="member-role">Web Designer & Front-end Developer</p>
+                        <p class="member-bio">MBA graduate with expertise in management and responsive web design. Specialised in converting designs to pixel-perfect, performant web pages.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Tailwind</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member-card">
+                    <div class="member-info">
+                        <h3 class="member-name">Prasad Akashkumar</h3>
+                        <p class="member-role">Mobile Developer</p>
+                        <p class="member-bio">Skilled mobile app developer specializing in Android and cross-platform development. Expert in building scalable applications using Kotlin and Flutter.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">MVVM</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member-card">
+                    <div class="member-info">
+                        <h3 class="member-name">Ashishkumar Ladava</h3>
+                        <p class="member-role">Full Stack Developer</p>
+                        <p class="member-bio">Passionate Full Stack Developer specializing in Java ecosystem. Strong foundation in building scalable applications with clean architecture.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member-card">
+                    <div class="member-info">
+                        <h3 class="member-name">Aniruddh</h3>
+                        <p class="member-role">Data Engineer</p>
+                        <p class="member-bio">2+ years building AWS-based ETL pipelines and data warehousing solutions. Expert in improving performance and reducing infrastructure costs.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Airflow</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member-card">
+                    <div class="member-info">
+                        <h3 class="member-name">Dhrumit Rathod</h3>
+                        <p class="member-role">Database Developer</p>
+                        <p class="member-bio">Database optimization specialist with 1 year experience. Skilled in designing efficient database schemas and automating data workflows.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">SQL Server</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">
+                Ready to start your project? Reach out to us through the contact information below.
+            </p>
+
+            <div class="contact-content-simple">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p class="contact-description">
+                        We respond to all inquiries within 24 hours. Feel free to reach out through 
+                        any of the following channels.
+                    </p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:youngtechwork@gmail.com">youngtechwork@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+919429500518">+91 9429500518</a>
+                                <br>
+                                <a href="tel:+919558874905" style="margin-top: 0.5rem; display: inline-block;">+91 9558874905</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Remote Team Worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="response-time">
+                        <strong>Response Time:</strong> Within 24 hours
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">YOUNG <span class="logo-tech">tech</span></h3>
+                    <p class="footer-description">
+                        Transforming ideas into digital excellence. We deliver cutting-edge 
+                        solutions that drive business growth and success.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Dribbble">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72M19.12 12.13c-3.8-2.83-6.22-4.15-11.56-6.5M14.06 21.34c2.14-6.57 3.01-9.61 4.43-14.19"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#team-members" onclick="scrollToSection('team-members'); return false;">About Us</a></li>
+                        <li><a href="#services" onclick="scrollToSection('services'); return false;">Services</a></li>
+                        <li><a href="#portfolio" onclick="scrollToSection('portfolio'); return false;">Portfolio</a></li>
+                        <li><a href="#testimonials" onclick="scrollToSection('testimonials'); return false;">Testimonials</a></li>
+                        <li><a href="#process" onclick="scrollToSection('process'); return false;">Our Process</a></li>
+                        <li><a href="#contact" onclick="scrollToSection('contact'); return false;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Mobile App Development</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Branding & Identity</a></li>
+                        <li><a href="#services">Maintenance & Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg class="footer-contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:youngtechwork@gmail.com">youngtechwork@gmail.com</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg class="footer-contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <a href="tel:+919429500518">9429500518</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg class="footer-contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Remote Team Worldwide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; <span id="currentYear"></span> YOUNG tech. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
